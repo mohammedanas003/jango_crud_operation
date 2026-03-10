@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+    <table border="1">
+        <thead>
+            <tr>
+            <th>Name</th>
+            <th>Role</th>
+            <th>Experience</th>
+            <th>Salary</th>
+            </tr>
+
+        </thead>
+        <tbody>
+            {% for i in datas %}
+        <tr>
+            <td>{{i.Name}}</td>
+            <td>{{i.Role}}</td>
+            <td>{{i.Experience}}</td>
+            <td>{{i.Salary}}</td>
+            <td><a href="{% url 'update' i.id %}">Update</a></td>
+            <td><a href="">Delete</a></td>
+        </tr> 
+        {% endfor %}   
+
+        </tbody>
+
+
+
+
+
+    </table>
+    </center>
+</body>
+</html>

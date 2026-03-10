@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center> 
+        <form action="{% url 'update' datas.id %}" method="POST">
+            {% csrf_token %}
+            Name:<input type="text" value="{{datas.Name}}" name="name"><br>
+            Role:<input type="text" value="{{datas.Role}}" name="role"><br>
+            Experience:<input type="number" value="{{datas.Experience}}" name="exp"><br>
+            Salary:<input type="number" value="{{datas.Salary}}" name="salary"><br>
+            <button type="submit">Submit</button>
+
+
+        </form>
+    </center>
+</body>
+</html>
